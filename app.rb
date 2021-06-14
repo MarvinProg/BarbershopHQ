@@ -13,8 +13,8 @@ class Barber < ActiveRecord::Base
 
 end
 
-
 get '/' do
+  @barbers = Barber.all  
   erb :index 
 end
 
@@ -35,8 +35,6 @@ before '/secure/*' do
     halt erb(:login_form)
   end
 end
-
-
 
 get '/login/form' do
   erb :login_form
