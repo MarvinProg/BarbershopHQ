@@ -23,7 +23,7 @@ get '/' do
 end
 
 get '/visit' do
-  erb :visit
+    erb :visit
 end
 
 post '/visit' do
@@ -34,19 +34,16 @@ post '/visit' do
   @barber = params[:barber]
   @color = params[:color]
 
-
+  c = Client.new
+  c.name = @username
+  c.phone = @phone
+  c.datestamp = @datetime
+  c.barber = @barber
+  c.color = @color
+  c.save
 
   erb "<h2>Спасибо, вы записались! </h2>" 
 end
-
-
-
-
-
-
-
-
-
 
 configure do
   enable :sessions
