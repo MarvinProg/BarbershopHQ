@@ -5,17 +5,17 @@
   	
   	<div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ваше имя</label>
-    <input name="client[name]" type="text" class="form-control" placeholder="Введите ваше имя" value="<%=@username%>">
+    <input name="client[name]" type="text" class="form-control" placeholder="Введите ваше имя" value="<%= @c.name %>">
     </div>
 
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ваш телефон</label>
-    <input name="client[phone]" type="text" class="form-control" placeholder="Введите ваш номер телефона" value="<%=@phone%>">
+    <input name="client[phone]" type="text" class="form-control" placeholder="Введите ваш номер телефона" value="<%= @c.phone %>">
 	</div>
 
  	<div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Когда вас ждать?</label>
-    <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control" placeholder="Введите дату и время" value="<%=@datetime%>">
+    <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @c.datestamp %>">
 	</div>
 
    
