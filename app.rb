@@ -13,6 +13,11 @@ class Barber < ActiveRecord::Base
 
 end
 
+
+get '/' do
+  erb :index 
+end
+
 configure do
   enable :sessions
 end
@@ -31,9 +36,7 @@ before '/secure/*' do
   end
 end
 
-get '/' do
-  erb 'Can you handle a <a href="/secure/place">secret</a>?'
-end
+
 
 get '/login/form' do
   erb :login_form
