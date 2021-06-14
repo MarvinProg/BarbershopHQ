@@ -59,6 +59,10 @@ post '/visit' do
   erb "<h2>Спасибо, вы записались! </h2>" 
 end
 
+get '/barber/:id' do
+  erb :barber
+end
+
 configure do
   enable :sessions
 end
